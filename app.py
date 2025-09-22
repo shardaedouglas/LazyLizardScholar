@@ -1,7 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template, request
+from dotenv import load_dotenv
 
-app = Flask(__name__)
+load_dotenv()
+
+app = Flask(__name__, template_folder="templates")
+
 
 @app.route('/')
 def landing():
-    return 'test'
+    return render_template("home.html")
