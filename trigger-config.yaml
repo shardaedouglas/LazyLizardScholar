@@ -1,0 +1,8 @@
+name: cyberstudy-auto-deploy
+description: Auto-deploy CyberStudy to Cloud Run on push to main
+github:
+  owner: shardaedouglas
+  name: LazyLizardScholar
+  push:
+    branch: ^main$
+filename: cloudbuild.yaml
