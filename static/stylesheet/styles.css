@@ -110,13 +110,34 @@ h1, h2, h3, h4, h5, h6 {
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
     font-weight: 800;
     letter-spacing: -0.025em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.hero-content .display-3 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #667eea; /* Fallback color for browsers that don't support background-clip */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Navigation Styles */
@@ -250,6 +271,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
   position: relative;
   z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-image {
@@ -362,6 +387,29 @@ h1, h2, h3, h4, h5, h6 {
 /* Tech Stack Preview */
 .tech-stack-preview {
     margin-top: var(--spacing-3xl);
+    position: relative;
+}
+
+.tech-stack-preview::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.tech-stack-preview h2 {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 900;
+    letter-spacing: -0.02em;
 }
 
 .tech-categories {
@@ -370,11 +418,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-category {
-    background: white;
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    padding: var(--spacing-3xl);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--success-color), var(--warning-color), var(--info-color));
+    border-radius: 20px 20px 0 0;
+}
+
+.tech-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 [data-bs-theme="dark"] .tech-category {
@@ -385,24 +453,40 @@ h1, h2, h3, h4, h5, h6 {
 .tech-logos {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
     align-items: center;
     justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.tech-category h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
 }
 
 .tech-logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     object-fit: contain;
-    transition: transform var(--transition-fast);
-    filter: grayscale(100%);
-    opacity: 0.7;
+    transition: all var(--transition-normal);
+    filter: grayscale(0%);
+    opacity: 0.9;
+    border-radius: 12px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .tech-logo:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
+    transform: scale(1.15) translateY(-4px);
+    filter: grayscale(0%) brightness(1.1);
     opacity: 1;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Tech Stack Page Styles */
@@ -737,7 +821,16 @@ footer .text-muted {
     }
     
     .tech-logo {
-        height: 50px;
+        height: 60px;
+        padding: 6px;
+    }
+    
+    .tech-category {
+        padding: var(--spacing-xl);
+    }
+    
+    .tech-category h5 {
+        font-size: 1.2rem;
     }
     
     .learning-path {
@@ -1850,7 +1943,7 @@ footer .text-muted {
 /* About Page Styles */
 .founder-story {
     background: white;
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--gray-200);
@@ -1883,6 +1976,11 @@ footer .text-muted {
 
 .founder-image {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0;
 }
 
 .founder-photo {
@@ -1890,7 +1988,7 @@ footer .text-muted {
     height: 300px;
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     border: 4px solid var(--primary-color);
     object-fit: cover;
     object-position: center;
@@ -1902,7 +2000,7 @@ footer .text-muted {
 
 .founder-info {
     background: white;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--gray-200);
@@ -2436,6 +2534,7 @@ footer .text-muted {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     position: relative;
     overflow: hidden;
+    min-height: auto;
 }
 
 .hero-section::before {

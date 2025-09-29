@@ -80,12 +80,18 @@ def signin():
         session['parent_name'] = user['parent_name']
         session['email'] = user['email']
         
+        # Check if user is admin
+        if user.get('role') == 'admin':
+            session['role'] = 'admin'
+            print(f"Admin signed in: {user['email']}")
+            return redirect(url_for('admin_dashboard'))
+        
         if remember_me:
             session.permanent = True
         
         print(f"Server-side session set: {dict(session)}")
         
-        # Redirect to dashboard
+        # Redirect to parent dashboard
         return redirect(url_for('parent_dashboard'))
     
     return render_template("signin.html")
@@ -329,6 +335,18 @@ def api_signin():
         session['parent_name'] = user['parent_name']
         session['email'] = user['email']
         
+        # Check if user is admin
+        if user.get('role') == 'admin':
+            session['role'] = 'admin'
+            print(f"Admin signed in via API: {user['email']}")
+            return jsonify({
+                'success': True,
+                'message': 'Admin sign in successful',
+                'parent_name': user['parent_name'],
+                'role': 'admin',
+                'redirect_url': '/admin'
+            })
+        
         if remember_me:
             session.permanent = True
         
@@ -353,6 +371,90 @@ def api_logout():
         return jsonify({'success': True, 'message': 'Logged out successfully'})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/api/forgot-password', methods=['POST'])
+def api_forgot_password():
+    """Handle forgot password requests"""
+    try:
+        data = request.get_json()
+        email = data.get('email', '').strip().lower()
+        
+        if not email:
+            return jsonify({'error': 'Email is required'}), 400
+        
+        # Validate email format
+        import re
+        email_regex = r'^[^\s@]+@[^\s@]+\.[^\s@]+$'
+        if not re.match(email_regex, email):
+            return jsonify({'error': 'Invalid email format'}), 400
+        
+        # Check if user exists
+        users = load_users()
+        user_exists = False
+        for user in users:
+            if user['email'] == email:
+                user_exists = True
+                break
+        
+        # Always return success for security (don't reveal if email exists)
+        # In a real application, you would:
+        # 1. Generate a secure reset token
+        # 2. Store it in database with expiration
+        # 3. Send email with reset link
+        # 4. Log the request for security monitoring
+        
+        print(f"Password reset requested for email: {email}")
+        
+        return jsonify({
+            'success': True,
+            'message': 'If an account with that email exists, a password reset link has been sent.'
+        })
+        
+    except Exception as e:
+        print(f"Forgot password error: {str(e)}")
+        return jsonify({'error': 'An error occurred processing your request'}), 500
+
+@app.route('/reset-password', methods=['GET', 'POST'])
+def reset_password():
+    """Password reset page"""
+    if request.method == 'POST':
+        token = request.form.get('token', '')
+        new_password = request.form.get('newPassword', '')
+        confirm_password = request.form.get('confirmPassword', '')
+        
+        # Validate inputs
+        if not new_password or not confirm_password:
+            return render_template("reset_password.html", 
+                                 error="All fields are required", 
+                                 token=token)
+        
+        if new_password != confirm_password:
+            return render_template("reset_password.html", 
+                                 error="Passwords do not match", 
+                                 token=token)
+        
+        if len(new_password) < 6:
+            return render_template("reset_password.html", 
+                                 error="Password must be at least 6 characters", 
+                                 token=token)
+        
+        # In a real application, you would:
+        # 1. Validate the reset token
+        # 2. Check if token is expired
+        # 3. Find the user associated with the token
+        # 4. Update their password
+        # 5. Invalidate the token
+        
+        # For demo purposes, we'll just show a success message
+        print(f"Password reset attempted with token: {token}")
+        
+        return render_template("reset_password.html", 
+                             success="Password has been reset successfully! You can now sign in with your new password.",
+                             token=token)
+    
+    # GET request - show reset form
+    token = request.args.get('token', 'demo-token-123')
+    return render_template("reset_password.html", token=token)
 
 @app.route('/api/dashboard-data')
 def api_dashboard_data():
@@ -472,55 +574,20 @@ def api_dashboard_data():
 def admin_dashboard():
     """Admin dashboard - requires admin authentication"""
     if not session.get('authenticated') or not is_admin(session.get('user_id')):
-        return redirect(url_for('admin_signin'))
+        return redirect(url_for('signin'))
     
     return render_template("admin_dashboard.html")
 
 @app.route('/admin/signin', methods=['GET', 'POST'])
 def admin_signin():
-    """Admin sign-in page"""
-    if request.method == 'POST':
-        email = request.form.get('email', '').strip().lower()
-        password = request.form.get('password', '')
-        
-        if not email or not password:
-            return render_template("admin_signin.html", error="Email and password are required")
-        
-        users = load_users()
-        user = None
-        
-        # Find admin user by email
-        for u in users:
-            if u['email'] == email and u.get('role') == 'admin':
-                user = u
-                break
-        
-        if not user:
-            return render_template("admin_signin.html", error="Invalid admin credentials")
-        
-        # Verify password
-        if not verify_password(password, user['password_hash'], user['salt']):
-            return render_template("admin_signin.html", error="Invalid admin credentials")
-        
-        # Set session
-        session['authenticated'] = True
-        session['user_id'] = user['id']
-        session['parent_name'] = user['parent_name']
-        session['email'] = user['email']
-        session['role'] = 'admin'
-        
-        print(f"Admin signed in: {user['email']}")
-        
-        # Redirect to admin dashboard
-        return redirect(url_for('admin_dashboard'))
-    
-    return render_template("admin_signin.html")
+    """Redirect to main signin page - admin credentials now handled there"""
+    return redirect(url_for('signin'))
 
 @app.route('/admin/logout')
 def admin_logout():
     """Admin logout"""
     session.clear()
-    return redirect(url_for('admin_signin'))
+    return redirect(url_for('signin'))
 
 # Admin API endpoints
 @app.route('/api/admin/students')
