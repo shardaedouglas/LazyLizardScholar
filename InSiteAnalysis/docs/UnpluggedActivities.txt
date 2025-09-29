@@ -1,0 +1,334 @@
+Computer Science Adventure: Unplugged Activities & Puzzles!
+
+1.0 Welcome, Adventurer!
+
+Hello and welcome to a world of puzzles, games, and amazing discoveries! This book is your guide on an exciting adventure into the secrets of computer science. And the best part? You won't need a computer to get started!
+
+We're going to explore big ideas in technology using "unplugged" activities. This just means we'll be using hands-on games, drawing, and teamwork to understand how computers "think." These activities are super important because they help us learn in a physical way, and as experts say, "a single thirty minute unplugged activity can save many hours of confusion in the computer lab."
+
+So, get your thinking cap on and your adventurous spirit ready. It's time to become a computer science explorer!
+
+1.1 What is Computer Science?
+
+You might think computer science is just about playing games or sending emails, but it's so much more! It's the art of using logic and creativity to solve problems, big and small. By learning these skills, you're not just learning about technology; you're learning how to be a better thinker in all parts of your life.
+
+In this adventure, you will learn to:
+
+* Think Critically: Learn to solve tricky problems like a detective, breaking them down into smaller pieces.
+* Be Persistent: Discover how to keep trying even when things get hard, learning from your mistakes to find a solution.
+* Get Creative: Use your imagination to build and create new things, from secret codes to your very own stories.
+
+
+--------------------------------------------------------------------------------
+
+
+Okay, adventurer, are you ready? Our first big secret in computer science is all about giving really, really clear instructions!
+
+2.0 The Art of Instructions: Algorithms & Programs
+
+First Stop: The Land of Instructions!
+
+Every single thing a computer does starts with a set of instructions. To a computer, "make me a sandwich" doesn't make any sense. It needs every single step, in the right order. In computer science, we have special names for these instructions.
+
+* An Algorithm is simply "A list of steps that you can follow to finish a task." Think about the steps to plant a seed: first you get a pot, then you add soil, then you put the seed in, then you add water. That's an algorithm!
+* A Program is "An algorithm that has been coded into something that can be run by a machine." When we turn our step-by-step instructions into a language of symbols that a computer (or a friend acting like a robot!) can understand, we've created a program.
+
+2.1 Activity: Happy Maps
+
+Objective: This activity will teach you how to create a simple set of instructions (an algorithm) to guide a character named a "Flurb" to its favorite snack.
+
+What You'll Learn:
+
+* How to create a simple algorithm.
+* Why the sequence (the order) of instructions is super important.
+
+Instructions:
+
+1. First, meet our character: "Flurbs are happy, fuzzy little things. Flurbs love to eat fruit."
+2. Your Task: Your job is to help the Flurb get to the fruit. The grid below shows the Flurb and a yummy piece of fruit. You need to choose the one arrow that will guide the Flurb to the fruit in a single step.
+
+Happy Maps: Single-Step Adventure
+
+Which way should the Flurb step to get to the fruit?
+
+	
+🍎	
+😶	
+
+Choose your arrow:
+
+* ➡️ (Right)
+* ⬅️ (Left)
+* ⬆️ (Up)
+* ⬇️ (Down)
+
+Think About It!
+
+* Did you feel like you were actually telling the Flurb what to do?
+* What would it be like to control a robot that way?
+
+2.2 Activity: Move It, Move It
+
+Objective: Let's get moving! This activity builds on the last one by creating a program with multiple steps to guide a "Walking Machine" (a friend or family member!) through a maze.
+
+What You'll Learn:
+
+* How to turn a list of movements into a program using symbols.
+* How to plan a route with multiple steps.
+
+Instructions:
+
+The Secret Code Instead of shouting directions, we'll use a secret code of arm signals to program our Walking Machine.
+
+* North: Arms straight up
+* South: Arms straight down
+* East: Right arm straight out to the right
+* West: Left arm straight out to the left
+* Stop: Arms crossed over your chest
+
+How to Play
+
+1. Work with a partner. One person is the Controller (that's you!) and the other is the Walking Machine.
+2. The Walking Machine starts on a "Start" square.
+3. The Controller's job is to use the arm signals to guide the Walking Machine through the maze below to land on the smiley face.
+4. The Walking Machine follows the arm signals one step at a time.
+5. When the Walking Machine reaches the goal, the Controller gives the "Stop" signal. You did it!
+
+Here is your map. Can you write down the steps (North, East, etc.) you'll need before you begin?
+
+Start		
+		
+		YAY! 😊
+
+Challenge! Once you get the hang of it, try giving two or three instructions at once before the "Walking Machine" moves. This is like writing a longer program for a computer to follow!
+
+2.3 Activity: Graph Paper Programming
+
+Objective: In this activity, you'll write a complete program using only symbols. Your program will be a set of instructions for a friend to reproduce a secret drawing on a grid.
+
+What You'll Learn:
+
+* How to turn an algorithm (words) into a program (symbols).
+* How to follow a program precisely to create something.
+
+Instructions:
+
+1. First, here is our programming key. These five symbols are our entire programming language!
+
+Symbol	Action
+➡️	Move One Square Right
+⬅️	Move One Square Left
+⬆️	Move One Square Up
+⬇️	Move One Square Down
+🖍️	Fill-In Square with Color
+
+1. Let's see how this works. Imagine we want to create this image on a 4x4 grid. We always start in the top-left square, which is marked with a star.
+
+⭐	⬛		
+		⬛	
+			
+			
+
+The program to create this image would be: ➡️, 🖍️, ➡️, ⬇️, 🖍️
+
+1. Now it's your turn! Your task is to write the program that creates the image below. Start at the star (⭐) and write down the sequence of symbols on a piece of paper. When you're done, see if a friend can follow your program to draw the picture correctly!
+
+⭐		⬛	
+	⬛		
+			
+			
+
+
+--------------------------------------------------------------------------------
+
+
+You're getting great at writing instructions! But what happens when you need to do the same thing over and over again? Let's find out!
+
+3.0 Again and Again: The Power of Loops
+
+Next Up: The Land of Loops!
+
+Imagine you wanted a robot to clap its hands 100 times. You could write "Clap" 100 times, but that would be exhausting! Programmers have a shortcut for this called a Loop.
+
+A Loop is simply "The action of doing something over and over again." Instead of saying "play my song, play my song, play my song," you can use a loop and just say "play my song three times." This makes your programs shorter, neater, and much more powerful.
+
+3.1 Activity: Getting Loopy Dance Party
+
+Objective: Let's have a dance party! This activity uses a fun dance to teach you how to find repeating patterns and turn them into a single loop command.
+
+What You'll Learn:
+
+* How to recognize repeating patterns in a sequence of actions.
+* How to convert a series of actions into a simple loop.
+
+Instructions:
+
+1. It's time to learn a new dance called "The Iteration!"
+2. Here are the moves in order:
+  * Clap
+  * Clap
+  * Clap
+  * Hands Behind Head
+  * Hands on Waist
+  * Hands on Waist
+  * Hands Behind Head
+3. Challenge: That's a lot of moves! Let's see if we can use loops to make the instructions shorter.
+  * How could you rewrite the Clap, Clap, Clap part using a loop?
+  * Do you see another pattern? Look at the moves: Behind Head, Waist, Waist. How could you simplify the whole dance by finding the bigger repeating pattern?
+4. (Psst... a super-programmer might write the dance like this: Repeat 3 times: Clap, then Repeat 2 times: (Behind Head, Waist, Waist). Wait, that's not quite right. How about: Repeat 3 times: Clap, then Behind Head, then Repeat 2 times: Waist, then Behind Head. Can you find an even better way?)
+
+
+--------------------------------------------------------------------------------
+
+
+Great job with loops! But even with the best instructions, sometimes things go wrong. Let's take a trip to a place where we learn how to find and fix those mistakes.
+
+4.0 Finding the Fix: Debugging
+
+Whoops! Welcome to Buggy Town!
+
+Even the best programmers make mistakes. In computer science, a mistake or a problem in your program is called a "bug." The process of finding and fixing those problems is called Debugging.
+
+Debugging is "Finding and fixing problems in your algorithm or program." It's like being a detective, carefully looking for clues to figure out what went wrong. Debugging is a normal—and very important—part of creating anything with code.
+
+4.1 Activity: Relay Programming - The Debugging Challenge
+
+Objective: In this activity, your job is to be the detective! You'll be given a program with a "bug" in it, and your mission is to find the mistake and fix it.
+
+What You'll Learn:
+
+* How to carefully check a program for errors.
+* How to fix a program so that it creates the correct image.
+
+Instructions:
+
+1. Let's quickly review our Graph Paper Programming symbols.
+
+Symbol	Action
+➡️	Move One Square Right
+⬅️	Move One Square Left
+⬆️	Move One Square Up
+⬇️	Move One Square Down
+🖍️	Fill-In Square with Color
+
+1. Below is a puzzle. On the left is the Target Image—this is what the drawing should look like. In the middle is the Buggy Program that has a mistake. On the right is a blank grid for you to use on a piece of paper.
+
+Target Image	Buggy Program	Your Drawing (Blank Grid)
+⭐<br>⬛<br>⬛	⬇️ 🖍️ ➡️ 🖍️	⭐<br>
+
+1. Your first step is to act like the computer. Follow the Buggy Program step-by-step and draw what it makes in the blank grid on a piece of paper. Start at the star!
+2. Challenge: Now, compare your drawing to the Target Image. Can you find the "bug" in the program? There is one incorrect symbol. Find it, and write the corrected program!
+
+
+--------------------------------------------------------------------------------
+
+
+You're a super bug-squasher! Now that you can write instructions, repeat them, and fix them, it's time to learn about a super-powered tool that helps you build bigger and better programs.
+
+5.0 Building Blocks: Functions and Variables
+
+Level Up: The World of Functions!
+
+As your programs get bigger, you might find yourself writing the same groups of instructions over and over. That's where functions and variables come in! They are like special building blocks for your code.
+
+* A Function is "A piece of code that you can easily call over and over again." Think of the chorus of a song. You write the words for the chorus once, and then you can just say "sing the chorus" whenever you need it, instead of writing all the words out every single time.
+* A Variable is "A placeholder for a piece of information that can change." Imagine a poem that goes: "My student ____, standing proud." The blank space is a variable! You can put anyone's name in there—Bill, Annie, or Jenny—without having to rewrite the whole poem.
+
+5.1 Activity: Functional Suncatchers
+
+Objective: Let's make something beautiful! In this hands-on activity, we'll make a real suncatcher to understand how functions can group together repeating steps into a single "skill."
+
+What You'll Need:
+
+* A piece of string (about one foot long)
+* A few "beads" (any kind of bead)
+* A few "spacers" (buttons or different-colored beads work great)
+* One "special charm" for the bottom (a larger bead or prism)
+
+Instructions:
+
+1. Imagine you had to write down every single step to make a suncatcher. It might look something like this:
+  * Make a Knot, Add a Bead, Make a Knot, Add a Spacer, Make a Knot, Add a Bead, Make a Knot, Add a Spacer, Make a Knot, Add Special Charm, Make Final Knot.
+2. Whew, that's a lot of steps! But do you see a pattern that repeats? The sequence Add a Bead, Make a Knot, Add a Spacer, Make a Knot happens twice!
+3. Let's turn that pattern into a function. On a piece of paper, create a worksheet like the one below and define "Skill 1" as our repeating pattern.
+4. SKILL 1
+  1. Add a Bead
+  2. Make a Knot
+  3. Add a Spacer
+  4. Make a Knot
+5. Now, we can rewrite our main "Program" to be much shorter and easier to read by just calling our function!
+6. PROGRAM
+  1. Make an initial Knot
+  2. Skill 1
+  3. Skill 1
+  4. Add Special Charm
+  5. Make Final Knot
+
+See how much simpler that is? That's the power of functions!
+
+5.2 Activity: Songwriting with Parameters
+
+Objective: This activity builds on our song idea by showing how you can change one small part of a function each time you use it. This is done with something called a "parameter," which is just a variable for your function.
+
+What You'll Learn:
+
+* How to find the repeating "chorus" (function) in a song.
+* How to use "parameters" (variables) to change the function slightly.
+
+Instructions:
+
+1. Let's look at the lyrics for the song "Old MacDonald."
+2. Verse 1: Old MacDonald had a farm, E-I-E-I-O. And on his farm he had a cow, E-I-E-I-O. With a moo moo here and a moo moo there, Here a moo, there a moo, everywhere a moo moo. Old MacDonald had a farm, E-I-E-I-O.
+3. The song repeats this whole structure for every animal, but two things change each time: the animal's name and the animal's sound.
+4. We can write this as a single function that takes two parameters: a variable for the animal and a variable for the sound. It would look like this: Chorus(animal, sound)
+5. Challenge: Now, can you write the function calls for the first three verses of "Old MacDonald"? Fill in the blanks!
+  * Chorus("Cow", "Moo")
+  * Chorus("______", "Oink")
+  * Chorus("______", "Quack")
+
+
+--------------------------------------------------------------------------------
+
+
+Wow, you're building programs like a pro! For our final challenge, we're going to learn the secret language that all computers speak.
+
+6.0 The Secret Code of Computers: Binary
+
+Final Challenge: The Binary Zone!
+
+Have you ever wondered how computers store movies, music, and pictures? It's all done with a secret code called Binary.
+
+Binary is "A way of representing information using only two options." For a computer, those two options are "on" and "off," which we can represent with a 1 and a 0, or a black square and a white square. Everything a computer does, from showing a movie to sending a message, is broken down into this simple two-option code.
+
+6.1 Activity: Binary Bracelets
+
+Objective: In this activity, you will use a binary "secret code" to spell out your first initial using only two symbols, just like a computer!
+
+What You'll Learn:
+
+* How to encode a letter into a binary pattern.
+* How to decode a binary pattern back into a letter.
+
+Instructions:
+
+1. Here is a simplified Binary Decoder Key. It shows how the letters A, B, and C can be written using a pattern of 8 squares (or "bits"). A black square can mean "on" (1) and a white square can mean "off" (0).
+
+Letter	8-Bit Binary Code
+A	⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
+B	⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬜
+C	⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+
+1. Bracelet Worksheet: On a piece of paper, draw a strip of 8 squares right next to each other, like this:
+
+							
+
+1. Now, find the first letter of your name in the key. (If your name doesn't start with A, B, or C, just pick one to practice with!) Color in the squares on your bracelet worksheet to match the binary pattern for that letter. Congratulations, you've encoded your initial!
+2. Decoding Challenge: Can you figure out what letter this bracelet represents?
+
+⬜	⬛	⬜	⬜	⬜	⬜	⬛	⬜
+
+
+--------------------------------------------------------------------------------
+
+
+Congratulations, Computer Science Adventurer! You've completed your unplugged journey and learned some of the biggest secrets of technology. You've proven you have what it takes to think like a computer scientist. Keep asking questions, keep being creative, and never stop exploring!

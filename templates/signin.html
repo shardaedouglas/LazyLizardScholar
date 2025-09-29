@@ -1,0 +1,327 @@
+{% extends "base.html" %}
+
+{% block title %}Parent Sign In - CyberStudy{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="display-4 fw-bold mb-4">Parent Portal</h1>
+                <p class="lead mb-0">Access your child's learning progress and manage their coding journey</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sign In Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="signin-card">
+                    <div class="signin-header text-center mb-4">
+                        <div class="signin-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">Welcome Back</h3>
+                        <p class="text-muted">Sign in to access your parent dashboard</p>
+                    </div>
+
+                    {% if error %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>{{ error }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    {% endif %}
+                    
+                    <form id="signinForm" class="signin-form" method="POST" action="/signin">
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                       placeholder="Enter your email" required>
+                            </div>
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label fw-semibold">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" id="password" name="password" 
+                                       placeholder="Enter your password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback" id="passwordError"></div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember me for 30 days
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-4">
+                            <button type="submit" class="btn btn-primary btn-lg" id="signinBtn">
+                                <span class="btn-text">Sign In</span>
+                                <span class="btn-spinner d-none">
+                                    <i class="fas fa-spinner fa-spin me-2"></i>Signing In...
+                                </span>
+                            </button>
+                        </div>
+                        
+                        <!-- Demo credentials info -->
+                        <div class="alert alert-info" role="alert">
+                            <h6 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Demo Credentials</h6>
+                            <p class="mb-2">Use these credentials to test the sign-in functionality:</p>
+                            <p class="mb-2">
+                                <strong>Email:</strong> demo@cyberstudy.com<br>
+                                <strong>Password:</strong> demo123
+                            </p>
+                            <button type="button" class="btn btn-outline-info btn-sm" id="fillDemoCredentials">
+                                <i class="fas fa-magic me-1"></i>Fill Demo Credentials
+                            </button>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="#" class="text-decoration-none" id="forgotPasswordLink">Forgot your password?</a>
+                        </div>
+                    </form>
+
+                    <div class="signin-footer text-center mt-4">
+                        <p class="text-muted mb-0">Don't have an account yet?</p>
+                        <a href="#" class="btn btn-outline-primary mt-2" id="createAccountLink">
+                            Create Parent Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="fw-bold mb-4">What You Can Do in Your Parent Portal</h2>
+                <p class="lead text-muted">Stay connected with your child's coding journey</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Track Progress</h5>
+                    <p class="text-muted">Monitor your child's learning progress, completed projects, and skill development.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Manage Schedule</h5>
+                    <p class="text-muted">View upcoming classes, reschedule sessions, and manage your child's learning calendar.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Communicate</h5>
+                    <p class="text-muted">Message instructors, receive updates, and stay informed about your child's progress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Sign-in page loaded');
+    
+    const signinForm = document.getElementById('signinForm');
+    const signinBtn = document.getElementById('signinBtn');
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('email');
+    
+    // Verify all elements are found
+    console.log('Form elements found:');
+    console.log('  signinForm:', !!signinForm);
+    console.log('  signinBtn:', !!signinBtn);
+    console.log('  togglePassword:', !!togglePassword);
+    console.log('  passwordInput:', !!passwordInput);
+    console.log('  emailInput:', !!emailInput);
+    
+    // Test API connectivity
+    fetch('/api/signin', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({})
+    }).then(response => {
+        console.log('API endpoint accessible, status:', response.status);
+    }).catch(error => {
+        console.error('API endpoint not accessible:', error);
+    });
+
+    // Toggle password visibility
+    togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        const icon = this.querySelector('i');
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+    });
+
+    // Form validation
+    function validateForm() {
+        let isValid = true;
+        
+        // Clear previous errors
+        clearFieldError('email');
+        clearFieldError('password');
+        
+        // Email validation
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!email) {
+            showFieldError('email', 'Email is required');
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            showFieldError('email', 'Please enter a valid email address');
+            isValid = false;
+        } else {
+            clearFieldError('email');
+        }
+        
+        // Password validation
+        const password = passwordInput.value;
+        if (!password) {
+            showFieldError('password', 'Password is required');
+            isValid = false;
+        } else if (password.length < 6) {
+            showFieldError('password', 'Password must be at least 6 characters');
+            isValid = false;
+        } else {
+            clearFieldError('password');
+        }
+        
+        console.log('Form validation result:', isValid);
+        return isValid;
+    }
+
+    function showFieldError(fieldName, message) {
+        const field = document.getElementById(fieldName);
+        const errorDiv = document.getElementById(fieldName + 'Error');
+        
+        field.classList.add('is-invalid');
+        errorDiv.textContent = message;
+    }
+
+    function clearFieldError(fieldName) {
+        const field = document.getElementById(fieldName);
+        const errorDiv = document.getElementById(fieldName + 'Error');
+        
+        field.classList.remove('is-invalid');
+        errorDiv.textContent = '';
+    }
+
+    // Form submission
+    signinForm.addEventListener('submit', function(e) {
+        if (!validateForm()) {
+            e.preventDefault();
+            return;
+        }
+        
+        // Show loading state
+        signinBtn.disabled = true;
+        signinBtn.querySelector('.btn-text').classList.add('d-none');
+        signinBtn.querySelector('.btn-spinner').classList.remove('d-none');
+        
+        console.log('Submitting form to server...');
+        // Let the form submit normally to the server
+    });
+
+    // Alert function
+    function showAlert(type, message) {
+        // Remove existing alerts
+        const existingAlerts = document.querySelectorAll('.alert');
+        existingAlerts.forEach(alert => alert.remove());
+        
+        // Create new alert
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show`;
+        alertDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        // Insert at top of form
+        signinForm.insertBefore(alertDiv, signinForm.firstChild);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            if (alertDiv.parentNode) {
+                alertDiv.remove();
+            }
+        }, 5000);
+    }
+
+    // Create account link
+    document.getElementById('createAccountLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        // Open the signup modal
+        const signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
+        signupModal.show();
+    });
+
+    // Forgot password link
+    document.getElementById('forgotPasswordLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        showAlert('info', 'Password reset functionality coming soon! Please contact support for assistance.');
+    });
+    
+    // Fill demo credentials button
+    document.getElementById('fillDemoCredentials').addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Filling demo credentials');
+        emailInput.value = 'demo@cyberstudy.com';
+        passwordInput.value = 'demo123';
+        
+        // Clear any existing errors
+        clearFieldError('email');
+        clearFieldError('password');
+        
+        // Show success message
+        showAlert('success', 'Demo credentials filled! Click "Sign In" to test the functionality.');
+    });
+});
+</script>
+{% endblock %}

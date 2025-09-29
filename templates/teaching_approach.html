@@ -1,0 +1,510 @@
+{% extends 'base.html' %}
+{% block title %}Teaching Approach - CyberStudy{% endblock %}
+
+{% block content %}
+
+<!-- Teaching Approach Hero -->
+<section class="py-5 bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Our Teaching Philosophy</h1>
+                <p class="lead mb-4">Cultivating the next generation of problem solvers through research-backed pedagogical strategies and hands-on learning experiences.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Universal Design</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Unplugged Learning</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Collaborative</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-chalkboard-teacher display-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Philosophy -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">Our Educational Foundation</h2>
+                <p class="lead text-muted">Every student deserves the opportunity to learn computer science. The benefits extend far beyond vocational training—they develop essential 21st-century skills that foster critical thinking, logic, persistence, and creativity necessary to excel at problem-solving across all subject areas.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="philosophy-card text-center">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Creativity</h5>
+                    <p class="text-muted">Encouraging innovative thinking and creative problem-solving approaches.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="philosophy-card text-center">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Collaboration</h5>
+                    <p class="text-muted">Building teamwork skills through peer learning and shared projects.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="philosophy-card text-center">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Communication</h5>
+                    <p class="text-muted">Developing clear expression of ideas and technical concepts.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="philosophy-card text-center">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Problem Solving</h5>
+                    <p class="text-muted">Mastering systematic approaches to tackle complex challenges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Teaching Strategies -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Core Teaching Methodologies</h2>
+                <p class="lead text-muted">Our research-backed pedagogical strategies create an environment where students can explore, collaborate, and persevere through challenges.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Unplugged Learning</h4>
+                    </div>
+                    <p class="text-muted mb-4">A critical component of our curriculum is the use of "unplugged" activities that introduce core computer science concepts without computers. These lessons provide a shared, physical experience that helps students grasp complex and abstract ideas through kinesthetic and collaborative engagement.</p>
+                    <div class="methodology-benefits">
+                        <h6 class="fw-semibold mb-3">Key Benefits:</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Builds strong mental models before coding</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Creates shared classroom experiences</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Makes abstract concepts concrete</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Saves hours of confusion in computer lab</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="/unplugged_activities" class="btn btn-outline-primary">
+                                <i class="fas fa-puzzle-piece me-2"></i>Explore Unplugged Activities
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Structured Problem-Solving</h4>
+                    </div>
+                    <p class="text-muted mb-4">We teach students the "Puzzle Solving Recipe," a framework based on Polya's Four Step Problem Solving Process that gives students a clear, repeatable method for approaching any challenge they encounter.</p>
+                    <div class="methodology-steps">
+                        <h6 class="fw-semibold mb-3">The Four Steps:</h6>
+                        <div class="step-item">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <strong>Understand the Puzzle</strong>
+                                <p class="mb-0 text-muted small">What does the puzzle want you to do? Can you talk about the problem in your own words?</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <strong>Create a Plan</strong>
+                                <p class="mb-0 text-muted small">Write an algorithm, draw a picture, work backwards, or solve one small piece at a time.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <strong>Perform and Perfect</strong>
+                                <p class="mb-0 text-muted small">Hunt for one error at a time and retest your plan after every change.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <strong>Check Your Work</strong>
+                                <p class="mb-0 text-muted small">Did your answer solve the puzzle? Now, is there an easier way to do it?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Debugging Approach -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">The Art of Debugging</h2>
+                <p class="lead text-muted">We teach students a structured approach to troubleshooting called the "Debugging Recipe," turning errors into learning opportunities.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="debugging-approach">
+                    <div class="debugging-step">
+                        <div class="debugging-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="debugging-content">
+                            <h5 class="fw-semibold">Understand the Task at Hand</h5>
+                            <p class="text-muted">Do you understand the puzzle prompt? Can you restate it? Do you understand the code you were given?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="debugging-step">
+                        <div class="debugging-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div class="debugging-content">
+                            <h5 class="fw-semibold">Pay Attention to Directions & Work</h5>
+                            <p class="text-muted">Review directions multiple times. Check your work frequently.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="debugging-step">
+                        <div class="debugging-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="debugging-content">
+                            <h5 class="fw-semibold">Take it Slow</h5>
+                            <p class="text-muted">Add only one element at a time and test the solution before adding more.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="debugging-step">
+                        <div class="debugging-icon">
+                            <i class="fas fa-step-forward"></i>
+                        </div>
+                        <div class="debugging-content">
+                            <h5 class="fw-semibold">One Step at a Time</h5>
+                            <p class="text-muted">Watch your program run carefully to see where it goes wrong. What does it do versus what should it do?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Universal Design for Learning -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Universal Design for Learning (UDL)</h2>
+                <p class="lead text-muted">Our curriculum is built on the research-based UDL framework, making learning accessible to the widest range of students by reducing barriers and implementing flexible instruction.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="udl-card">
+                    <div class="udl-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Multiple Means of Engagement</h5>
+                    <p class="text-muted">The "Why" - Keeping learners motivated through choice, feedback, and clear expectations, fostering ownership and persistence through challenges.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="udl-card">
+                    <div class="udl-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Multiple Means of Representation</h5>
+                    <p class="text-muted">The "What" - Information presented in various ways—visuals, audio, text, and hands-on activities—to clarify language and introduce new terms accessibly.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="udl-card">
+                    <div class="udl-icon">
+                        <i class="fas fa-hands-clapping"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Multiple Means of Action</h5>
+                    <p class="text-muted">The "How" - Learners given multiple ways to demonstrate understanding using accessible technologies and support for goal-setting and progress monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Concepts -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Core Computer Science Concepts</h2>
+                <p class="lead text-muted">Our curriculum introduces fundamental programming concepts through a blend of unplugged activities and online practice.</p>
+            </div>
+        </div>
+        
+        <div class="concepts-grid">
+            <div class="concept-card">
+                <div class="concept-header">
+                    <div class="concept-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h4 class="fw-bold">Algorithms & Sequencing</h4>
+                </div>
+                <div class="concept-content">
+                    <p class="concept-definition"><strong>Definition:</strong> An algorithm is a list of steps that you can follow to finish a task.</p>
+                    <div class="concept-activities">
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Unplugged: Graph Paper Programming</h6>
+                            <p class="text-muted small">Students "program" a partner to reproduce a drawing on a grid using symbolic language, reinforcing the importance of clear, sequential instructions.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Online: Maze Sequence</h6>
+                            <p class="text-muted small">Students use block-based programming to guide characters through mazes using sequential command blocks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="concept-header">
+                    <div class="concept-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h4 class="fw-bold">Loops & Repetition</h4>
+                </div>
+                <div class="concept-content">
+                    <p class="concept-definition"><strong>Definition:</strong> A loop is the action of doing something over and over again, making code more concise and efficient.</p>
+                    <div class="concept-activities">
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Unplugged: Getting Loopy</h6>
+                            <p class="text-muted small">Students participate in a "dance party" where they learn to convert repeating moves into single loop commands.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Online: Bee Loops</h6>
+                            <p class="text-muted small">Students use loop blocks to program a bee to perform repetitive tasks efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="concept-header">
+                    <div class="concept-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4 class="fw-bold">Functions & Reusability</h4>
+                </div>
+                <div class="concept-content">
+                    <p class="concept-definition"><strong>Definition:</strong> A function is a piece of code that you can easily call over and over again, reducing redundancy and organizing code.</p>
+                    <div class="concept-activities">
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Unplugged: Songwriting</h6>
+                            <p class="text-muted small">Students analyze songs to identify repeating choruses, demonstrating how functions reduce redundancy.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Online: Artist Functions</h6>
+                            <p class="text-muted small">Students use pre-built functions to create complex drawings with repeating patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="concept-header">
+                    <div class="concept-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h4 class="fw-bold">Variables & Parameters</h4>
+                </div>
+                <div class="concept-content">
+                    <p class="concept-definition"><strong>Definition:</strong> A variable is a placeholder for information that can change, while parameters modify function behavior for specific tasks.</p>
+                    <div class="concept-activities">
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Unplugged: Variables in Envelopes</h6>
+                            <p class="text-muted small">Students use labeled envelopes to hold values that can change, introducing the core concept of variables.</p>
+                        </div>
+                        <div class="activity-item">
+                            <h6 class="fw-semibold">Online: Artist Variables</h6>
+                            <p class="text-muted small">Students use variables to make drawings dynamic and parameters to create variety in similar shapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Digital Citizenship -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Digital Citizenship Integration</h2>
+                <p class="lead text-muted">Teaching students to be responsible digital citizens is essential to modern computer science education, ensuring they navigate the online world safely and ethically.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="citizenship-card">
+                    <div class="citizenship-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Internet Safety Rules</h4>
+                    <p class="text-muted mb-4">We teach three simple and memorable rules for young students to follow whenever they are online:</p>
+                    <div class="safety-rules">
+                        <div class="rule-item">
+                            <span class="rule-number">1</span>
+                            <p class="mb-0"><strong>Always ask your parent (or teacher) first.</strong> Seek guidance before visiting new websites or sharing information.</p>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">2</span>
+                            <p class="mb-0"><strong>Only talk to people you know.</strong> Understand the boundary between known friends and strangers online.</p>
+                        </div>
+                        <div class="rule-item">
+                            <span class="rule-number">3</span>
+                            <p class="mb-0"><strong>Stick to places that are just right for you.</strong> Recognize age-appropriate websites and avoid content meant for older users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="citizenship-card">
+                    <div class="citizenship-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Understanding Digital Footprints</h4>
+                    <p class="text-muted mb-4">Students learn that every online action contributes to their Digital Footprint. We teach the crucial difference between safe and unsafe information sharing.</p>
+                    <div class="info-types">
+                        <div class="info-type safe">
+                            <h6 class="fw-semibold text-success">SAFE - Personal Information</h6>
+                            <ul class="list-unstyled small">
+                                <li>Your first name</li>
+                                <li>Your favorite food</li>
+                                <li>Your opinion (shared respectfully)</li>
+                                <li>Your hobbies and interests</li>
+                            </ul>
+                        </div>
+                        <div class="info-type unsafe">
+                            <h6 class="fw-semibold text-danger">UNSAFE - Private Information</h6>
+                            <ul class="list-unstyled small">
+                                <li>Your full name</li>
+                                <li>Your address or phone number</li>
+                                <li>Your date of birth</li>
+                                <li>Your Social Security number</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Creative Projects -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">From Learning to Creating</h2>
+                <p class="lead text-muted">Our culminating projects mark the transition from structured learning to creative expression, allowing students to synthesize their knowledge and build something personally meaningful.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Creating Stories</h4>
+                    <p class="text-muted">Students apply all their coding skills to build animated stories with moving characters, taking ownership of their learning and producing tangible results.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Creating Games</h4>
+                    <p class="text-muted">Students design interactive games with user-controlled actions, synthesizing knowledge of sequencing, loops, events, and variables.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-lg-8 mx-auto">
+                <div class="peer-learning-card">
+                    <h4 class="fw-semibold mb-3">The Value of Peer Learning</h4>
+                    <p class="text-muted mb-4">A key feature of our creative projects is the ability to "Look Under the Hood." When students share their projects, they also share all the code behind it, fostering a powerful collaborative learning environment where students can:</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="learning-benefit">
+                                <i class="fas fa-lightbulb text-primary"></i>
+                                <p class="mb-0 small">Learn different ways to solve problems by seeing peers' code</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="learning-benefit">
+                                <i class="fas fa-rocket text-primary"></i>
+                                <p class="mb-0 small">Get inspiration for new ideas and features</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="learning-benefit">
+                                <i class="fas fa-tools text-primary"></i>
+                                <p class="mb-0 small">Debug and build upon each other's projects constructively</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-3">Ready to Experience The Cyber Study Approach?</h2>
+                <p class="lead mb-0">Join our comprehensive curriculum and see how our research-backed methods can transform your child's learning experience.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="#signup" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-graduation-cap me-2"></i>Start Learning Today
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,495 @@
+{% extends 'base.html' %}
+{% block title %}Unplugged Activities - CyberStudy{% endblock %}
+
+{% block content %}
+
+<!-- Unplugged Activities Hero -->
+<section class="py-5 bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Computer Science Adventure</h1>
+                <p class="lead mb-4">Unplugged Activities & Puzzles! Learn computer science concepts through hands-on games, drawing, and teamwork - no computer needed!</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Hands-On Learning</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">No Computer Required</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Fun & Interactive</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-puzzle-piece display-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">Welcome, Adventurer!</h2>
+                <p class="lead text-muted">This is your guide on an exciting adventure into the secrets of computer science. And the best part? You won't need a computer to get started!</p>
+                <p class="text-muted">We're going to explore big ideas in technology using "unplugged" activities. This just means we'll be using hands-on games, drawing, and teamwork to understand how computers "think." These activities are super important because they help us learn in a physical way, and as experts say, "a single thirty minute unplugged activity can save many hours of confusion in the computer lab."</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="skill-card text-center">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Think Critically</h5>
+                    <p class="text-muted">Learn to solve tricky problems like a detective, breaking them down into smaller pieces.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="skill-card text-center">
+                    <div class="skill-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Be Persistent</h5>
+                    <p class="text-muted">Discover how to keep trying even when things get hard, learning from your mistakes to find a solution.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="skill-card text-center">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h5 class="fw-semibold mb-3">Get Creative</h5>
+                    <p class="text-muted">Use your imagination to build and create new things, from secret codes to your very own stories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Activities Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Unplugged Activities</h2>
+                <p class="lead text-muted">Explore computer science concepts through fun, hands-on activities that don't require any technology!</p>
+            </div>
+        </div>
+        
+        <!-- Activity 1: Algorithms & Programs -->
+        <div class="activity-section mb-5">
+            <div class="activity-header">
+                <div class="activity-number">1</div>
+                <div class="activity-title">
+                    <h3 class="fw-bold mb-2">The Art of Instructions: Algorithms & Programs</h3>
+                    <p class="text-muted">Every single thing a computer does starts with a set of instructions. To a computer, "make me a sandwich" doesn't make any sense. It needs every single step, in the right order.</p>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="concept-definitions mb-4">
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Algorithm</h6>
+                        <p class="mb-0">"A list of steps that you can follow to finish a task." Think about the steps to plant a seed: first you get a pot, then you add soil, then you put the seed in, then you add water. That's an algorithm!</p>
+                    </div>
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Program</h6>
+                        <p class="mb-0">"An algorithm that has been coded into something that can be run by a machine." When we turn our step-by-step instructions into a language of symbols that a computer can understand, we've created a program.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Happy Maps</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>This activity will teach you how to create a simple set of instructions (an algorithm) to guide a character named a "Flurb" to its favorite snack.</p>
+                    </div>
+                    
+                    <div class="activity-instructions">
+                        <h6 class="fw-semibold text-info">What You'll Learn:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>How to create a simple algorithm</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Why the sequence (the order) of instructions is super important</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="activity-steps">
+                        <h6 class="fw-semibold text-warning">Instructions:</h6>
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>First, meet our character: "Flurbs are happy, fuzzy little things. Flurbs love to eat fruit."</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>Your Task: Your job is to help the Flurb get to the fruit. Choose the one arrow that will guide the Flurb to the fruit in a single step.</p>
+                        </div>
+                        
+                        <div class="puzzle-visual mb-4">
+                            <div class="puzzle-grid">
+                                <div class="grid-cell">🍎</div>
+                                <div class="grid-cell empty"></div>
+                                <div class="grid-cell">😶</div>
+                                <div class="grid-cell empty"></div>
+                            </div>
+                            <p class="text-center mt-3"><strong>Which way should the Flurb step to get to the fruit?</strong></p>
+                            <div class="arrow-options">
+                                <button class="btn btn-outline-primary me-2">➡️ Right</button>
+                                <button class="btn btn-outline-primary me-2">⬅️ Left</button>
+                                <button class="btn btn-outline-primary me-2">⬆️ Up</button>
+                                <button class="btn btn-outline-primary">⬇️ Down</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Move It, Move It</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>Let's get moving! This activity builds on the last one by creating a program with multiple steps to guide a "Walking Machine" through a maze.</p>
+                    </div>
+                    
+                    <div class="activity-instructions">
+                        <h6 class="fw-semibold text-info">What You'll Learn:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>How to turn a list of movements into a program using symbols</li>
+                            <li><i class="fas fa-check text-success me-2"></i>How to plan a route with multiple steps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="secret-code mb-4">
+                        <h6 class="fw-semibold text-warning">The Secret Code</h6>
+                        <p>Instead of shouting directions, we'll use a secret code of arm signals to program our Walking Machine.</p>
+                        <div class="code-symbols">
+                            <div class="code-item">
+                                <span class="code-symbol">North:</span> Arms straight up
+                            </div>
+                            <div class="code-item">
+                                <span class="code-symbol">South:</span> Arms straight down
+                            </div>
+                            <div class="code-item">
+                                <span class="code-symbol">East:</span> Right arm straight out to the right
+                            </div>
+                            <div class="code-item">
+                                <span class="code-symbol">West:</span> Left arm straight out to the left
+                            </div>
+                            <div class="code-item">
+                                <span class="code-symbol">Stop:</span> Arms crossed over your chest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Graph Paper Programming</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>In this activity, you'll write a complete program using only symbols. Your program will be a set of instructions for a friend to reproduce a secret drawing on a grid.</p>
+                    </div>
+                    
+                    <div class="programming-key mb-4">
+                        <h6 class="fw-semibold text-info">Programming Key</h6>
+                        <div class="key-table">
+                            <div class="key-row">
+                                <span class="symbol">➡️</span>
+                                <span class="action">Move One Square Right</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="symbol">⬅️</span>
+                                <span class="action">Move One Square Left</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="symbol">⬆️</span>
+                                <span class="action">Move One Square Up</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="symbol">⬇️</span>
+                                <span class="action">Move One Square Down</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="symbol">🖍️</span>
+                                <span class="action">Fill-In Square with Color</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Activity 2: Loops -->
+        <div class="activity-section mb-5">
+            <div class="activity-header">
+                <div class="activity-number">2</div>
+                <div class="activity-title">
+                    <h3 class="fw-bold mb-2">Again and Again: The Power of Loops</h3>
+                    <p class="text-muted">Imagine you wanted a robot to clap its hands 100 times. You could write "Clap" 100 times, but that would be exhausting! Programmers have a shortcut for this called a Loop.</p>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="concept-definitions mb-4">
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Loop</h6>
+                        <p class="mb-0">"The action of doing something over and over again." Instead of saying "play my song, play my song, play my song," you can use a loop and just say "play my song three times." This makes your programs shorter, neater, and much more powerful.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Getting Loopy Dance Party</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>Let's have a dance party! This activity uses a fun dance to teach you how to find repeating patterns and turn them into a single loop command.</p>
+                    </div>
+                    
+                    <div class="dance-moves mb-4">
+                        <h6 class="fw-semibold text-info">The Iteration Dance Moves:</h6>
+                        <div class="moves-list">
+                            <div class="move-item">Clap</div>
+                            <div class="move-item">Clap</div>
+                            <div class="move-item">Clap</div>
+                            <div class="move-item">Hands Behind Head</div>
+                            <div class="move-item">Hands on Waist</div>
+                            <div class="move-item">Hands on Waist</div>
+                            <div class="move-item">Hands Behind Head</div>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-box">
+                        <h6 class="fw-semibold text-warning">Challenge:</h6>
+                        <p>That's a lot of moves! Let's see if we can use loops to make the instructions shorter.</p>
+                        <ul>
+                            <li>How could you rewrite the Clap, Clap, Clap part using a loop?</li>
+                            <li>Do you see another pattern? Look at the moves: Behind Head, Waist, Waist. How could you simplify the whole dance by finding the bigger repeating pattern?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Activity 3: Debugging -->
+        <div class="activity-section mb-5">
+            <div class="activity-header">
+                <div class="activity-number">3</div>
+                <div class="activity-title">
+                    <h3 class="fw-bold mb-2">Finding the Fix: Debugging</h3>
+                    <p class="text-muted">Even the best programmers make mistakes. In computer science, a mistake or a problem in your program is called a "bug." The process of finding and fixing those problems is called Debugging.</p>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="concept-definitions mb-4">
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Debugging</h6>
+                        <p class="mb-0">"Finding and fixing problems in your algorithm or program." It's like being a detective, carefully looking for clues to figure out what went wrong. Debugging is a normal—and very important—part of creating anything with code.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Relay Programming - The Debugging Challenge</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>In this activity, your job is to be the detective! You'll be given a program with a "bug" in it, and your mission is to find the mistake and fix it.</p>
+                    </div>
+                    
+                    <div class="debugging-puzzle mb-4">
+                        <h6 class="fw-semibold text-info">Debugging Puzzle:</h6>
+                        <div class="puzzle-container">
+                            <div class="puzzle-section">
+                                <h6>Target Image</h6>
+                                <div class="debug-grid">
+                                    <div class="grid-cell">⭐</div>
+                                    <div class="grid-cell filled">⬛</div>
+                                    <div class="grid-cell filled">⬛</div>
+                                    <div class="grid-cell empty"></div>
+                                </div>
+                            </div>
+                            <div class="puzzle-section">
+                                <h6>Buggy Program</h6>
+                                <div class="program-code">⬇️ 🖍️ ➡️ 🖍️</div>
+                            </div>
+                            <div class="puzzle-section">
+                                <h6>Your Drawing</h6>
+                                <div class="debug-grid">
+                                    <div class="grid-cell">⭐</div>
+                                    <div class="grid-cell empty"></div>
+                                    <div class="grid-cell empty"></div>
+                                    <div class="grid-cell empty"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-3"><strong>Can you find the bug in the program?</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Activity 4: Functions and Variables -->
+        <div class="activity-section mb-5">
+            <div class="activity-header">
+                <div class="activity-number">4</div>
+                <div class="activity-title">
+                    <h3 class="fw-bold mb-2">Building Blocks: Functions and Variables</h3>
+                    <p class="text-muted">As your programs get bigger, you might find yourself writing the same groups of instructions over and over. That's where functions and variables come in! They are like special building blocks for your code.</p>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="concept-definitions mb-4">
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Function</h6>
+                        <p class="mb-0">"A piece of code that you can easily call over and over again." Think of the chorus of a song. You write the words for the chorus once, and then you can just say "sing the chorus" whenever you need it, instead of writing all the words out every single time.</p>
+                    </div>
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Variable</h6>
+                        <p class="mb-0">"A placeholder for a piece of information that can change." Imagine a poem that goes: "My student ____, standing proud." The blank space is a variable! You can put anyone's name in there—Bill, Annie, or Jenny—without having to rewrite the whole poem.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Functional Suncatchers</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>Let's make something beautiful! In this hands-on activity, we'll make a real suncatcher to understand how functions can group together repeating steps into a single "skill."</p>
+                    </div>
+                    
+                    <div class="materials-needed mb-4">
+                        <h6 class="fw-semibold text-info">What You'll Need:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-circle text-primary me-2"></i>A piece of string (about one foot long)</li>
+                            <li><i class="fas fa-circle text-primary me-2"></i>A few "beads" (any kind of bead)</li>
+                            <li><i class="fas fa-circle text-primary me-2"></i>A few "spacers" (buttons or different-colored beads work great)</li>
+                            <li><i class="fas fa-circle text-primary me-2"></i>One "special charm" for the bottom (a larger bead or prism)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="function-example mb-4">
+                        <h6 class="fw-semibold text-warning">Function Example:</h6>
+                        <div class="code-example">
+                            <div class="code-block">
+                                <h6>SKILL 1</h6>
+                                <ol>
+                                    <li>Add a Bead</li>
+                                    <li>Make a Knot</li>
+                                    <li>Add a Spacer</li>
+                                    <li>Make a Knot</li>
+                                </ol>
+                            </div>
+                            <div class="code-block">
+                                <h6>PROGRAM</h6>
+                                <ol>
+                                    <li>Make an initial Knot</li>
+                                    <li>Skill 1</li>
+                                    <li>Skill 1</li>
+                                    <li>Add Special Charm</li>
+                                    <li>Make Final Knot</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Songwriting with Parameters</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>This activity builds on our song idea by showing how you can change one small part of a function each time you use it. This is done with something called a "parameter," which is just a variable for your function.</p>
+                    </div>
+                    
+                    <div class="song-example mb-4">
+                        <h6 class="fw-semibold text-info">Old MacDonald Example:</h6>
+                        <div class="song-verse">
+                            <p><strong>Verse 1:</strong> Old MacDonald had a farm, E-I-E-I-O. And on his farm he had a cow, E-I-E-I-O. With a moo moo here and a moo moo there, Here a moo, there a moo, everywhere a moo moo. Old MacDonald had a farm, E-I-E-I-O.</p>
+                        </div>
+                        <div class="function-calls">
+                            <h6 class="fw-semibold text-warning">Function Calls:</h6>
+                            <div class="call-examples">
+                                <div class="call-item">Chorus("Cow", "Moo")</div>
+                                <div class="call-item">Chorus("______", "Oink")</div>
+                                <div class="call-item">Chorus("______", "Quack")</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Activity 5: Binary -->
+        <div class="activity-section mb-5">
+            <div class="activity-header">
+                <div class="activity-number">5</div>
+                <div class="activity-title">
+                    <h3 class="fw-bold mb-2">The Secret Code of Computers: Binary</h3>
+                    <p class="text-muted">Have you ever wondered how computers store movies, music, and pictures? It's all done with a secret code called Binary.</p>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="concept-definitions mb-4">
+                    <div class="definition-card">
+                        <h6 class="fw-semibold text-primary">Binary</h6>
+                        <p class="mb-0">"A way of representing information using only two options." For a computer, those two options are "on" and "off," which we can represent with a 1 and a 0, or a black square and a white square. Everything a computer does, from showing a movie to sending a message, is broken down into this simple two-option code.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <h4 class="fw-semibold mb-3">Activity: Binary Bracelets</h4>
+                    <div class="activity-objective">
+                        <h6 class="fw-semibold text-success">Objective:</h6>
+                        <p>In this activity, you will use a binary "secret code" to spell out your first initial using only two symbols, just like a computer!</p>
+                    </div>
+                    
+                    <div class="binary-key mb-4">
+                        <h6 class="fw-semibold text-info">Binary Decoder Key:</h6>
+                        <div class="key-table">
+                            <div class="key-row">
+                                <span class="letter">A</span>
+                                <span class="binary-pattern">⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="letter">B</span>
+                                <span class="binary-pattern">⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬜</span>
+                            </div>
+                            <div class="key-row">
+                                <span class="letter">C</span>
+                                <span class="binary-pattern">⬜ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="decoding-challenge mb-4">
+                        <h6 class="fw-semibold text-warning">Decoding Challenge:</h6>
+                        <p>Can you figure out what letter this bracelet represents?</p>
+                        <div class="bracelet-pattern">
+                            <div class="binary-square">⬜</div>
+                            <div class="binary-square">⬛</div>
+                            <div class="binary-square">⬜</div>
+                            <div class="binary-square">⬜</div>
+                            <div class="binary-square">⬜</div>
+                            <div class="binary-square">⬜</div>
+                            <div class="binary-square">⬛</div>
+                            <div class="binary-square">⬜</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Congratulations Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Congratulations, Computer Science Adventurer!</h2>
+                <p class="lead mb-4">You've completed your unplugged journey and learned some of the biggest secrets of technology. You've proven you have what it takes to think like a computer scientist.</p>
+                <p class="mb-4">Keep asking questions, keep being creative, and never stop exploring!</p>
+                <a href="/curriculum" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-graduation-cap me-2"></i>Continue Your Learning Journey
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

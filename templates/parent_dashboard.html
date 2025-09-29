@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+
+{% block title %}Parent Dashboard - CyberStudy{% endblock %}
+
+{% block content %}
+<!-- Dashboard Header -->
+<section class="dashboard-header bg-gradient-primary text-white py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="h3 fw-bold mb-2">Welcome back, <span id="parentName">Parent</span>!</h1>
+                <p class="mb-0">Here's what's happening with your child's coding journey</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="dashboard-actions">
+                    <button class="btn btn-outline-light btn-sm me-2" id="refreshData">
+                        <i class="fas fa-sync-alt me-1"></i>Refresh
+                    </button>
+                    <button class="btn btn-outline-light btn-sm" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt me-1"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Content -->
+<section class="py-5">
+    <div class="container">
+        <!-- Quick Stats -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" id="totalProjects">0</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" id="totalHours">0</h3>
+                        <p class="stat-label">Hours Learned</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" id="achievements">0</h3>
+                        <p class="stat-label">Achievements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" id="nextClass">0</h3>
+                        <p class="stat-label">Days to Next Class</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="row g-4">
+            <!-- Student Progress -->
+            <div class="col-lg-8">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-chart-line me-2"></i>Student Progress
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="progress-section mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-semibold">Current Level Progress</span>
+                                <span class="text-muted" id="progressPercentage">0%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-gradient-primary" role="progressbar" 
+                                     style="width: 0%" id="progressBar"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-projects">
+                            <h6 class="fw-semibold mb-3">Recent Projects</h6>
+                            <div id="recentProjectsList">
+                                <div class="text-center text-muted py-4">
+                                    <i class="fas fa-spinner fa-spin me-2"></i>Loading projects...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Classes -->
+            <div class="col-lg-4">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-calendar-alt me-2"></i>Upcoming Classes
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="upcomingClasses">
+                            <div class="text-center text-muted py-4">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading schedule...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Sections -->
+        <div class="row g-4 mt-4">
+            <!-- Achievements -->
+            <div class="col-lg-6">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-trophy me-2"></i>Recent Achievements
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="achievementsList">
+                            <div class="text-center text-muted py-4">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading achievements...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Messages -->
+            <div class="col-lg-6">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-comments me-2"></i>Messages from Instructors
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="messagesList">
+                            <div class="text-center text-muted py-4">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading messages...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Student Selection Modal (if multiple students) -->
+<div class="modal fade" id="studentSelectionModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Student</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted mb-3">You have multiple students enrolled. Please select which student's progress you'd like to view:</p>
+                <div id="studentList">
+                    <!-- Student options will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Dashboard functionality
+    const refreshBtn = document.getElementById('refreshData');
+    const logoutBtn = document.getElementById('logoutBtn');
+    
+    // Load dashboard data
+    loadDashboardData();
+    
+    // Refresh button
+    refreshBtn.addEventListener('click', function() {
+        loadDashboardData();
+    });
+    
+    // Logout button
+    logoutBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to logout?')) {
+            logout();
+        }
+    });
+    
+    // Load dashboard data
+    async function loadDashboardData() {
+        try {
+            const response = await fetch('/api/dashboard-data');
+            const data = await response.json();
+            
+            if (response.ok) {
+                updateDashboard(data);
+            } else {
+                if (response.status === 401) {
+                    // Not authenticated, redirect to sign in
+                    window.location.href = '/signin';
+                } else {
+                    showAlert('error', 'Failed to load dashboard data');
+                }
+            }
+        } catch (error) {
+            console.error('Dashboard load error:', error);
+            showAlert('error', 'Network error. Please check your connection.');
+        }
+    }
+    
+    // Update dashboard with data
+    function updateDashboard(data) {
+        // Update parent name
+        document.getElementById('parentName').textContent = data.parent_name || 'Parent';
+        
+        // Update stats
+        document.getElementById('totalProjects').textContent = data.stats.total_projects || 0;
+        document.getElementById('totalHours').textContent = data.stats.total_hours || 0;
+        document.getElementById('achievements').textContent = data.stats.achievements || 0;
+        document.getElementById('nextClass').textContent = data.stats.days_to_next_class || 0;
+        
+        // Update progress
+        const progressPercentage = data.progress.percentage || 0;
+        document.getElementById('progressPercentage').textContent = progressPercentage + '%';
+        document.getElementById('progressBar').style.width = progressPercentage + '%';
+        
+        // Update recent projects
+        updateRecentProjects(data.recent_projects || []);
+        
+        // Update upcoming classes
+        updateUpcomingClasses(data.upcoming_classes || []);
+        
+        // Update achievements
+        updateAchievements(data.achievements || []);
+        
+        // Update messages
+        updateMessages(data.messages || []);
+    }
+    
+    // Update recent projects
+    function updateRecentProjects(projects) {
+        const container = document.getElementById('recentProjectsList');
+        
+        if (projects.length === 0) {
+            container.innerHTML = '<div class="text-center text-muted py-3">No recent projects</div>';
+            return;
+        }
+        
+        container.innerHTML = projects.map(project => `
+            <div class="project-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="fw-semibold mb-1">${project.name}</h6>
+                        <p class="text-muted small mb-0">${project.description}</p>
+                    </div>
+                    <div class="text-end">
+                        <span class="badge bg-${project.status === 'completed' ? 'success' : 'warning'}">${project.status}</span>
+                        <div class="small text-muted">${project.date}</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Update upcoming classes
+    function updateUpcomingClasses(classes) {
+        const container = document.getElementById('upcomingClasses');
+        
+        if (classes.length === 0) {
+            container.innerHTML = '<div class="text-center text-muted py-3">No upcoming classes</div>';
+            return;
+        }
+        
+        container.innerHTML = classes.map(cls => `
+            <div class="class-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="fw-semibold mb-1">${cls.title}</h6>
+                        <p class="text-muted small mb-0">${cls.instructor}</p>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-semibold">${cls.time}</div>
+                        <div class="small text-muted">${cls.date}</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Update achievements
+    function updateAchievements(achievements) {
+        const container = document.getElementById('achievementsList');
+        
+        if (achievements.length === 0) {
+            container.innerHTML = '<div class="text-center text-muted py-3">No recent achievements</div>';
+            return;
+        }
+        
+        container.innerHTML = achievements.map(achievement => `
+            <div class="achievement-item">
+                <div class="d-flex align-items-center">
+                    <div class="achievement-icon me-3">
+                        <i class="fas fa-${achievement.icon}"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-semibold mb-1">${achievement.title}</h6>
+                        <p class="text-muted small mb-0">${achievement.description}</p>
+                        <div class="small text-muted">${achievement.date}</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Update messages
+    function updateMessages(messages) {
+        const container = document.getElementById('messagesList');
+        
+        if (messages.length === 0) {
+            container.innerHTML = '<div class="text-center text-muted py-3">No new messages</div>';
+            return;
+        }
+        
+        container.innerHTML = messages.map(message => `
+            <div class="message-item">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="fw-semibold mb-1">${message.from}</h6>
+                        <p class="text-muted small mb-2">${message.subject}</p>
+                        <p class="small">${message.preview}</p>
+                    </div>
+                    <div class="text-end">
+                        <div class="small text-muted">${message.date}</div>
+                        ${message.unread ? '<span class="badge bg-primary">New</span>' : ''}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Logout function
+    async function logout() {
+        try {
+            const response = await fetch('/api/logout', {
+                method: 'POST'
+            });
+            
+            if (response.ok) {
+                window.location.href = '/signin';
+            } else {
+                showAlert('error', 'Logout failed. Please try again.');
+            }
+        } catch (error) {
+            console.error('Logout error:', error);
+            showAlert('error', 'Network error during logout.');
+        }
+    }
+    
+    // Alert function
+    function showAlert(type, message) {
+        // Remove existing alerts
+        const existingAlerts = document.querySelectorAll('.alert');
+        existingAlerts.forEach(alert => alert.remove());
+        
+        // Create new alert
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type === 'error' ? 'danger' : 'success'} alert-dismissible fade show position-fixed`;
+        alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        alertDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        document.body.appendChild(alertDiv);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            if (alertDiv.parentNode) {
+                alertDiv.remove();
+            }
+        }, 5000);
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Sign In - CyberStudy{% endblock %}
+
+{% block content %}
+<!-- Admin Hero Section -->
+<section class="hero-section bg-gradient-danger text-white py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-shield-alt me-3"></i>Admin Portal
+                </h1>
+                <p class="lead mb-0">Secure access to student progress and parent account management</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Sign In Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="admin-signin-card">
+                    <div class="admin-signin-header text-center mb-4">
+                        <div class="admin-signin-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">Admin Access</h3>
+                        <p class="text-muted">Enter your admin credentials to continue</p>
+                    </div>
+
+                    {% if error %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>{{ error }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    {% endif %}
+
+                    <form id="adminSigninForm" class="admin-signin-form" method="POST" action="/admin/signin">
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">Admin Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                       placeholder="Enter admin email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label fw-semibold">Admin Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" id="password" name="password" 
+                                       placeholder="Enter admin password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-4">
+                            <button type="submit" class="btn btn-danger btn-lg" id="adminSigninBtn">
+                                <span class="btn-text">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Access Admin Panel
+                                </span>
+                                <span class="btn-spinner d-none">
+                                    <i class="fas fa-spinner fa-spin me-2"></i>Signing In...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="admin-signin-footer text-center">
+                        <div class="alert alert-warning" role="alert">
+                            <h6 class="alert-heading">
+                                <i class="fas fa-lock me-2"></i>Admin Credentials
+                            </h6>
+                            <p class="mb-2">Use these credentials to access the admin panel:</p>
+                            <p class="mb-0">
+                                <strong>Email:</strong> admin@cyberstudy.com<br>
+                                <strong>Password:</strong> admin123
+                            </p>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <a href="/" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-arrow-left me-1"></i>Back to Main Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Security Notice -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="security-notice">
+                    <i class="fas fa-shield-alt text-danger me-2"></i>
+                    <span class="fw-semibold">Security Notice:</span>
+                    <span class="text-muted">This is a restricted admin area. All access attempts are logged and monitored.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const adminSigninForm = document.getElementById('adminSigninForm');
+    const adminSigninBtn = document.getElementById('adminSigninBtn');
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('email');
+
+    // Toggle password visibility
+    togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        const icon = this.querySelector('i');
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+    });
+
+    // Form submission
+    adminSigninForm.addEventListener('submit', function(e) {
+        // Show loading state
+        adminSigninBtn.disabled = true;
+        adminSigninBtn.querySelector('.btn-text').classList.add('d-none');
+        adminSigninBtn.querySelector('.btn-spinner').classList.remove('d-none');
+        
+        console.log('Submitting admin sign-in form...');
+        // Let the form submit normally to the server
+    });
+
+    // Auto-fill admin credentials for testing
+    emailInput.value = 'admin@cyberstudy.com';
+    passwordInput.value = 'admin123';
+});
+</script>
+{% endblock %}

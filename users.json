@@ -1,0 +1,30 @@
+[
+  {
+    "id": "user_demo_001",
+    "email": "demo@cyberstudy.com",
+    "password_hash": "21e9f54c129c2b5f7cf5227464832b84659e145d87acb825821f0c03783f7047",
+    "salt": "74c0a8df194a13f77471a549eca3fd68",
+    "parent_name": "Demo Parent",
+    "created_at": "2025-09-25T02:14:55.174281",
+    "students": [
+      {
+        "id": "student_001",
+        "name": "Alex Johnson",
+        "age": 10,
+        "grade": "5th",
+        "level": "Beginner",
+        "enrolled_date": "2024-01-15"
+      }
+    ]
+  },
+  {
+    "id": "admin_001",
+    "email": "admin@cyberstudy.com",
+    "password_hash": "6d5773033bc747c29fdcf37fa283b785dc398979aad1e831fb55f9f9cc7a7a07",
+    "salt": "241f3f8374bd626fce626a544bade118",
+    "parent_name": "Admin",
+    "role": "admin",
+    "created_at": "2025-09-25T02:37:41.838231",
+    "students": []
+  }
+]

@@ -1,0 +1,647 @@
+{% extends 'base.html' %}
+{% block title %}Projects & Activities - CyberStudy{% endblock %}
+
+{% block content %}
+
+<!-- Projects Hero -->
+<section class="py-5 bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Projects & Activities</h1>
+                <p class="lead mb-4">Explore our collection of hands-on coding projects and unplugged activities designed to make learning fun and engaging for every age group.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Age-Appropriate</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Hands-On</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">Fun Learning</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-project-diagram display-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Age Groups Navigation -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="age-nav">
+                    <div class="age-nav-item active" data-age="all">
+                        <i class="fas fa-globe"></i>
+                        <span>All Ages</span>
+                    </div>
+                    <div class="age-nav-item" data-age="5-8">
+                        <i class="fas fa-baby"></i>
+                        <span>Ages 5-8</span>
+                    </div>
+                    <div class="age-nav-item" data-age="9-12">
+                        <i class="fas fa-child"></i>
+                        <span>Ages 9-12</span>
+                    </div>
+                    <div class="age-nav-item" data-age="13-18">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Ages 13-18</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Unplugged Activities Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Unplugged Activities</h2>
+                <p class="lead text-muted">Learn computer science concepts without a computer! These hands-on activities build foundational understanding through play and movement.</p>
+            </div>
+        </div>
+        
+        <!-- Ages 5-8 Unplugged -->
+        <div class="project-section" data-age="5-8">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 5-8: Foundation Building</h3>
+                <p class="text-muted">Simple, engaging activities that introduce basic programming concepts through play.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Happy Maps</h5>
+                        <p class="text-muted mb-3">Help Flurb get to the fruit! Learn to give clear directions and understand the importance of step-by-step instructions.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Grid paper</li>
+                                <li>• Colored pencils</li>
+                                <li>• Arrow stickers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-dance"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Getting Loopy Dance</h5>
+                        <p class="text-muted mb-3">Learn about loops through dance! Discover repeating patterns and how to simplify instructions using repetition.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Open space</li>
+                                <li>• Music (optional)</li>
+                                <li>• Dance move cards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Graph Paper Programming</h5>
+                        <p class="text-muted mb-3">Create secret drawings using only symbols! Learn to write programs that a friend can follow to recreate your artwork.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Graph paper</li>
+                                <li>• Pencils</li>
+                                <li>• Symbol reference sheet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ages 9-12 Unplugged -->
+        <div class="project-section" data-age="9-12">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 9-12: Building Complexity</h3>
+                <p class="text-muted">More challenging unplugged activities that introduce advanced programming concepts.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Debugging Relay</h5>
+                        <p class="text-muted mb-3">Be a code detective! Find and fix bugs in programs to help them work correctly. Learn systematic debugging techniques.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Buggy program cards</li>
+                                <li>• Correction markers</li>
+                                <li>• Timer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Songwriting with Functions</h5>
+                        <p class="text-muted mb-3">Learn about functions by analyzing songs! Discover how choruses work and create your own song with repeating patterns.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Song lyrics sheets</li>
+                                <li>• Paper and pencils</li>
+                                <li>• Musical instruments (optional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card unplugged">
+                        <div class="project-icon">
+                            <i class="fas fa-bracelet"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Binary Bracelets</h5>
+                        <p class="text-muted mb-3">Create your own binary code bracelet! Learn how computers store information using only 1s and 0s.</p>
+                        <div class="project-details">
+                            <span class="badge bg-primary me-2">Unplugged</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-materials">
+                            <h6 class="fw-semibold">Materials Needed:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Beads (2 colors)</li>
+                                <li>• String</li>
+                                <li>• Binary alphabet chart</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Block-Based Coding Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Block-Based Coding Projects</h2>
+                <p class="lead text-muted">Visual programming that makes coding accessible and fun! Drag and drop blocks to create amazing projects.</p>
+            </div>
+        </div>
+        
+        <!-- Ages 5-8 Block Coding -->
+        <div class="project-section" data-age="5-8">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 5-8: Visual Programming</h3>
+                <p class="text-muted">Simple block-based projects that introduce programming concepts through colorful, intuitive interfaces.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-cat"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Scratch: Animated Pet</h5>
+                        <p class="text-muted mb-3">Create your own virtual pet that responds to clicks and follows your mouse around the screen!</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">Scratch</span>
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Event handling</li>
+                                <li>• Motion blocks</li>
+                                <li>• Costume changes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">MakeCode: Digital Art</h5>
+                        <p class="text-muted mb-3">Use Microsoft MakeCode to create beautiful digital artwork with code! Draw shapes, patterns, and colorful designs.</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">MakeCode</span>
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Drawing commands</li>
+                                <li>• Color mixing</li>
+                                <li>• Pattern creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">EduBlocks: Simple Game</h5>
+                        <p class="text-muted mb-3">Build a basic catching game where players collect falling objects using arrow keys!</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">EduBlocks</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Keyboard input</li>
+                                <li>• Collision detection</li>
+                                <li>• Score keeping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ages 9-12 Block Coding -->
+        <div class="project-section" data-age="9-12">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 9-12: Advanced Block Programming</h3>
+                <p class="text-muted">More complex projects that challenge students to think like programmers while using visual blocks.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Scratch: Maze Runner</h5>
+                        <p class="text-muted mb-3">Program a character to navigate through a complex maze using arrow keys and avoid obstacles!</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">Scratch</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Conditional statements</li>
+                                <li>• Collision detection</li>
+                                <li>• Level design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">MakeCode: Voice-Controlled Game</h5>
+                        <p class="text-muted mb-3">Create a game that responds to voice commands! Use sound recognition to control your character.</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">MakeCode</span>
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Sound input</li>
+                                <li>• Voice recognition</li>
+                                <li>• Event handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card block-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">EduBlocks: Data Visualization</h5>
+                        <p class="text-muted mb-3">Collect data and create interactive charts and graphs to visualize your findings!</p>
+                        <div class="project-details">
+                            <span class="badge bg-info me-2">EduBlocks</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Data collection</li>
+                                <li>• Chart creation</li>
+                                <li>• Data analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Text-Based Coding Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Text-Based Coding Projects</h2>
+                <p class="lead text-muted">Ready for the real thing? These projects use actual programming languages to build amazing applications and games.</p>
+            </div>
+        </div>
+        
+        <!-- Ages 9-12 Text Coding -->
+        <div class="project-section" data-age="9-12">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 9-12: Introduction to Text Coding</h3>
+                <p class="text-muted">Begin your journey into real programming with kid-friendly languages and exciting projects.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-snake"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Python: Snake Game</h5>
+                        <p class="text-muted mb-3">Build the classic Snake game using Python and Pygame! Learn about game loops, collision detection, and scoring.</p>
+                        <div class="project-details">
+                            <span class="badge bg-warning me-2">Python</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Python syntax</li>
+                                <li>• Game development</li>
+                                <li>• Object-oriented programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">HTML/CSS: Personal Website</h5>
+                        <p class="text-muted mb-3">Create your own personal website! Learn HTML structure and CSS styling to make it look amazing.</p>
+                        <div class="project-details">
+                            <span class="badge bg-success me-2">HTML/CSS</span>
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• HTML structure</li>
+                                <li>• CSS styling</li>
+                                <li>• Web design principles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">JavaScript: Interactive Calculator</h5>
+                        <p class="text-muted mb-3">Build a fully functional calculator that can add, subtract, multiply, and divide numbers!</p>
+                        <div class="project-details">
+                            <span class="badge bg-warning me-2">JavaScript</span>
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• JavaScript functions</li>
+                                <li>• DOM manipulation</li>
+                                <li>• Event handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ages 13-18 Text Coding -->
+        <div class="project-section" data-age="13-18">
+            <div class="section-header">
+                <h3 class="fw-bold mb-3">Ages 13-18: Advanced Programming</h3>
+                <p class="text-muted">Challenge yourself with professional-level projects using industry-standard tools and languages.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Unity/C#: 3D Platformer</h5>
+                        <p class="text-muted mb-3">Create a complete 3D platformer game with Unity! Learn game physics, level design, and C# programming.</p>
+                        <div class="project-details">
+                            <span class="badge bg-danger me-2">Unity/C#</span>
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• C# programming</li>
+                                <li>• 3D game development</li>
+                                <li>• Unity engine</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">React Native: Mobile App</h5>
+                        <p class="text-muted mb-3">Build a cross-platform mobile app that works on both iOS and Android! Learn modern app development.</p>
+                        <div class="project-details">
+                            <span class="badge bg-danger me-2">React Native</span>
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• JavaScript/React</li>
+                                <li>• Mobile development</li>
+                                <li>• Cross-platform design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card text-coding">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="fw-semibold mb-3">Python: AI Chatbot</h5>
+                        <p class="text-muted mb-3">Create an intelligent chatbot using Python and machine learning! Learn about AI and natural language processing.</p>
+                        <div class="project-details">
+                            <span class="badge bg-danger me-2">Python/AI</span>
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                        <div class="project-skills">
+                            <h6 class="fw-semibold">Skills Learned:</h6>
+                            <ul class="list-unstyled small">
+                                <li>• Machine learning</li>
+                                <li>• Natural language processing</li>
+                                <li>• AI development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Showcase -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Student Project Showcase</h2>
+                <p class="lead text-muted">See what our students have created! These amazing projects showcase the creativity and skills developed through our programs.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <i class="fas fa-gamepad display-1 text-primary"></i>
+                    </div>
+                    <div class="showcase-content">
+                        <h5 class="fw-semibold">"Space Adventure" Game</h5>
+                        <p class="text-muted small">Created by Maya, Age 10</p>
+                        <p class="text-muted">A Scratch game featuring a spaceship that collects stars while avoiding asteroids. Features multiple levels and a scoring system!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <i class="fas fa-palette display-1 text-success"></i>
+                    </div>
+                    <div class="showcase-content">
+                        <h5 class="fw-semibold">Digital Art Gallery</h5>
+                        <p class="text-muted small">Created by Alex, Age 12</p>
+                        <p class="text-muted">An interactive website showcasing digital artwork created with MakeCode. Features hover effects and smooth animations!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <i class="fas fa-robot display-1 text-warning"></i>
+                    </div>
+                    <div class="showcase-content">
+                        <h5 class="fw-semibold">AI Study Helper</h5>
+                        <p class="text-muted small">Created by Jordan, Age 16</p>
+                        <p class="text-muted">A Python chatbot that helps students with homework questions. Uses natural language processing to understand and respond to queries!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Started CTA -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-3">Ready to Start Your Coding Journey?</h2>
+                <p class="lead mb-0">Choose a project that excites you and begin creating amazing things with code!</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="#signup" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-rocket me-2"></i>Start Your Project
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+// Age filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const ageNavItems = document.querySelectorAll('.age-nav-item');
+    const projectSections = document.querySelectorAll('.project-section');
+    
+    ageNavItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const selectedAge = this.getAttribute('data-age');
+            
+            // Update active nav item
+            ageNavItems.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Show/hide project sections
+            projectSections.forEach(section => {
+                section.classList.remove('active');
+                if (selectedAge === 'all' || section.getAttribute('data-age') === selectedAge) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    // Initialize with "All Ages" selected
+    document.querySelector('.age-nav-item[data-age="all"]').click();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% block title %}Tech Stack - CyberStudy{% endblock %}
+
+{% block content %}
+
+<!-- Tech Stack Hero -->
+<section class="py-5 bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Our Technology Stack</h1>
+                <p class="lead mb-4">Comprehensive curriculum covering modern programming languages, frameworks, and tools used in today's tech industry.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">12+ Languages</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">20+ Frameworks</span>
+                    <span class="badge bg-light text-dark fs-6 px-3 py-2">50+ Projects</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-code display-1 opacity-75"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Categories -->
+<section class="py-5">
+    <div class="container">
+        <!-- Visual Programming -->
+        <div class="tech-category-section mb-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold text-primary mb-2">
+                        <i class="fas fa-puzzle-piece me-3"></i>Visual Programming
+                    </h2>
+                    <p class="lead text-muted">Perfect for beginners - learn programming concepts through visual blocks and drag-and-drop interfaces.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary fs-6 px-3 py-2">Beginner Friendly</span>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/scratch.png') }}" alt="Scratch" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">Scratch</h5>
+                        <p class="text-muted small mb-3">Visual programming language developed by MIT. Perfect for kids to learn programming concepts.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/blockly.png') }}" alt="Blockly" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">Blockly</h5>
+                        <p class="text-muted small mb-3">Google's visual programming editor that generates code in multiple languages.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/edublocks.jpg') }}" alt="EduBlocks" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">EduBlocks</h5>
+                        <p class="text-muted small mb-3">Visual programming tool for Python, designed to help students transition to text-based coding.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/makecode.png') }}" alt="MakeCode" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">MakeCode</h5>
+                        <p class="text-muted small mb-3">Microsoft's platform for creating interactive programming experiences with micro:bit and more.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="tech-category-section mb-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold text-success mb-2">
+                        <i class="fas fa-terminal me-3"></i>Programming Languages
+                    </h2>
+                    <p class="lead text-muted">Master the most popular and in-demand programming languages used in modern software development.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-success fs-6 px-3 py-2">Industry Standard</span>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/python.png') }}" alt="Python" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">Python</h5>
+                        <p class="text-muted small mb-3">Versatile, readable language perfect for beginners. Used in web development, data science, and AI.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/javascript.png') }}" alt="JavaScript" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">JavaScript</h5>
+                        <p class="text-muted small mb-3">The language of the web. Essential for frontend development and increasingly popular for backend.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/cplusplus.png') }}" alt="C++" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">C++</h5>
+                        <p class="text-muted small mb-3">High-performance language used in game development, system programming, and competitive programming.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/csharp.png') }}" alt="C#" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">C#</h5>
+                        <p class="text-muted small mb-3">Microsoft's modern language used for Windows applications, web development, and game development with Unity.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="tech-category-section mb-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold text-warning mb-2">
+                        <i class="fas fa-globe me-3"></i>Web Development
+                    </h2>
+                    <p class="lead text-muted">Build modern, responsive websites and web applications using the latest web technologies.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-warning fs-6 px-3 py-2">High Demand</span>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/html.png') }}" alt="HTML" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">HTML5</h5>
+                        <p class="text-muted small mb-3">The foundation of web development. Learn semantic markup and modern HTML5 features.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/css.png') }}" alt="CSS" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">CSS3</h5>
+                        <p class="text-muted small mb-3">Style and layout web pages with modern CSS including Flexbox, Grid, and animations.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-success">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/javascript.png') }}" alt="JavaScript" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">JavaScript</h5>
+                        <p class="text-muted small mb-3">Add interactivity and dynamic behavior to web pages. Learn ES6+ features and modern frameworks.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Development -->
+        <div class="tech-category-section mb-5">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold text-info mb-2">
+                        <i class="fas fa-gamepad me-3"></i>Game Development
+                    </h2>
+                    <p class="lead text-muted">Create immersive games and interactive experiences using industry-standard game engines and tools.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="badge bg-info fs-6 px-3 py-2">Creative</span>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/unity.png') }}" alt="Unity" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">Unity</h5>
+                        <p class="text-muted small mb-3">Cross-platform game engine used to create 2D and 3D games. Perfect for beginners and professionals alike.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-warning">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="tech-card h-100">
+                        <div class="tech-logo-container">
+                            <img src="{{ url_for('static', filename='images/Stack/unreal.png') }}" alt="Unreal Engine" class="tech-logo">
+                        </div>
+                        <h5 class="fw-semibold mb-2">Unreal Engine</h5>
+                        <p class="text-muted small mb-3">Powerful game engine used for AAA games. Learn visual scripting with Blueprints and C++ programming.</p>
+                        <div class="tech-level">
+                            <span class="badge bg-danger">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Path -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Recommended Learning Path</h2>
+                <p class="lead text-muted">Follow our structured curriculum to master programming from beginner to advanced levels.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="learning-path">
+                    <div class="path-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h5 class="fw-semibold">Visual Programming</h5>
+                            <p class="text-muted mb-0">Start with Scratch and Blockly to understand programming concepts</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h5 class="fw-semibold">Web Fundamentals</h5>
+                            <p class="text-muted mb-0">Learn HTML, CSS, and basic JavaScript for web development</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h5 class="fw-semibold">Python Programming</h5>
+                            <p class="text-muted mb-0">Master Python for general programming and data science</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h5 class="fw-semibold">Advanced Languages</h5>
+                            <p class="text-muted mb-0">Choose C++, C#, or advanced JavaScript based on interests</p>
+                        </div>
+                    </div>
+                    <div class="path-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h5 class="fw-semibold">Specialization</h5>
+                            <p class="text-muted mb-0">Focus on game development, web apps, or data science</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-3">Ready to Master These Technologies?</h2>
+                <p class="lead mb-0">Join our comprehensive curriculum and start building amazing projects today.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="/curriculum" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-graduation-cap me-2"></i>View Curriculum
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">Session Test</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <button class="btn btn-primary" onclick="testSession()">Test Session Status</button>
+                            <button class="btn btn-success" onclick="testSignIn()">Test Sign-In</button>
+                            <button class="btn btn-info" onclick="testDashboard()">Test Dashboard Access</button>
+                        </div>
+                        
+                        <div id="results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function testSession() {
+            try {
+                const response = await fetch('/test-session');
+                const data = await response.json();
+                
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-info">
+                        <h6>Session Status</h6>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-danger">
+                        <h6>Error</h6>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        async function testSignIn() {
+            try {
+                const formData = new FormData();
+                formData.append('email', 'demo@cyberstudy.com');
+                formData.append('password', 'demo123');
+                formData.append('rememberMe', 'on');
+                
+                const response = await fetch('/signin', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-${response.ok ? 'success' : 'danger'}">
+                        <h6>Sign-In Test</h6>
+                        <p>Status: ${response.status}</p>
+                        <p>URL: ${response.url}</p>
+                        <p>Redirected: ${response.redirected}</p>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-danger">
+                        <h6>Sign-In Error</h6>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        async function testDashboard() {
+            try {
+                const response = await fetch('/parent-dashboard');
+                
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-${response.ok ? 'success' : 'danger'}">
+                        <h6>Dashboard Access Test</h6>
+                        <p>Status: ${response.status}</p>
+                        <p>URL: ${response.url}</p>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('results').innerHTML = `
+                    <div class="alert alert-danger">
+                        <h6>Dashboard Error</h6>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
