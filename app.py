@@ -711,6 +711,15 @@ def api_manage_parent(parent_id):
         save_users(users)
         return jsonify({'success': True, 'message': 'Parent account updated successfully'})
 
+# SEO Routes
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt', mimetype='text/plain')
+
 # Initialize demo user and admin on startup
 create_demo_user()
 create_admin_user()

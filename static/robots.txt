@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cyberstudy-204672424751.us-central1.run.app/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /parent/
+Disallow: /api/
+Disallow: /reset-password
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /curriculum
+Allow: /teaching-approach
+Allow: /tech-stack
+Allow: /projects
+Allow: /unplugged-activities
+Allow: /signin
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -5,8 +5,41 @@
         <title>{% block title %}CyberStudy - Modern Coding Education{% endblock title %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
         <meta charset="utf-8">
-        <meta name="description" content="Empowering the next generation of cyber citizens through modern coding education">
-        <meta name="keywords" content="Shardae Douglas, coding, programming, education, kids, technology, computer science">
+        
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="{% block meta_title %}CyberStudy - Modern Coding Education for Kids{% endblock meta_title %}">
+        <meta name="description" content="{% block meta_description %}Empowering the next generation of cyber citizens through modern coding education. Learn programming, technology, and computer science with expert instructor Shardae Douglas.{% endblock meta_description %}">
+        <meta name="keywords" content="{% block meta_keywords %}coding education, programming for kids, computer science, technology education, Shardae Douglas, coding bootcamp, STEM education, cyber citizens, modern programming{% endblock meta_keywords %}">
+        <meta name="author" content="Shardae Douglas">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="7 days">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{% block og_url %}https://cyberstudy-204672424751.us-central1.run.app{% endblock og_url %}">
+        <meta property="og:title" content="{% block og_title %}CyberStudy - Modern Coding Education for Kids{% endblock og_title %}">
+        <meta property="og:description" content="{% block og_description %}Empowering the next generation of cyber citizens through modern coding education. Learn programming, technology, and computer science with expert instructor Shardae Douglas.{% endblock og_description %}">
+        <meta property="og:image" content="{% block og_image %}https://cyberstudy-204672424751.us-central1.run.app/static/images/Logo/LogoWithText.png{% endblock og_image %}">
+        <meta property="og:site_name" content="CyberStudy">
+        <meta property="og:locale" content="en_US">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{% block twitter_url %}https://cyberstudy-204672424751.us-central1.run.app{% endblock twitter_url %}">
+        <meta property="twitter:title" content="{% block twitter_title %}CyberStudy - Modern Coding Education for Kids{% endblock twitter_title %}">
+        <meta property="twitter:description" content="{% block twitter_description %}Empowering the next generation of cyber citizens through modern coding education. Learn programming, technology, and computer science with expert instructor Shardae Douglas.{% endblock twitter_description %}">
+        <meta property="twitter:image" content="{% block twitter_image %}https://cyberstudy-204672424751.us-central1.run.app/static/images/Logo/LogoWithText.png{% endblock twitter_image %}">
+        
+        <!-- Additional SEO Meta Tags -->
+        <meta name="theme-color" content="#667eea">
+        <meta name="msapplication-TileColor" content="#667eea">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-title" content="CyberStudy">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="{% block canonical_url %}https://cyberstudy-204672424751.us-central1.run.app{% endblock canonical_url %}">
         
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-X012TY4XSG"></script>
@@ -16,6 +49,40 @@
           gtag('js', new Date());
 
           gtag('config', 'G-X012TY4XSG');
+        </script>
+        
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "CyberStudy",
+          "description": "Empowering the next generation of cyber citizens through modern coding education",
+          "url": "https://cyberstudy-204672424751.us-central1.run.app",
+          "logo": "https://cyberstudy-204672424751.us-central1.run.app/static/images/Logo/LogoWithText.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Shardae Douglas",
+            "jobTitle": "Founder & Coding Instructor"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "shardae@cyberstudy.net"
+          },
+          "sameAs": [
+            "https://cyberstudy-204672424751.us-central1.run.app"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "description": "Modern coding education programs for children and teens",
+            "category": "Educational Services"
+          }
+        }
         </script>
         
         <!-- CSS Framework -->
